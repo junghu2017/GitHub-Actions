@@ -4,7 +4,7 @@ jobs:
   output:
     runs-on: ubuntu-latest
     steps:
-      - name: Print context information
+      - name: Print context  and others information
         run: |
           echo "Workflow Run Event Context:"
           echo "${{ toJson(github) }}"
