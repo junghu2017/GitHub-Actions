@@ -1,0 +1,23 @@
+name: Output context infomrtationion
+on: workflow_run
+jobs:
+  output:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print context information
+        run: |
+          echo "Workflow Run Event Context:"
+          echo "${{ toJson(github) }}"
+          echo "-----------------------------------"
+          echo "Job Context:"
+          echo "${{ toJson(job) }}"
+          echo "-----------------------------------"
+          echo "Steps Context:"
+          echo "${{ toJson(steps) }}"
+          echo "-----------------------------------"
+          echo "Runner Context:"
+          echo "${{ toJson(runner) }}"
+          echo "-----------------------------------"
+          echo "-----------------------------------"
+          echo "Secrets Context (masked):"
+          echo "${{ toJson(secrets) }}"
