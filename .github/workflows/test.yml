@@ -1,5 +1,5 @@
 name: Test Project
-on: [push, pull_request]
+on: workflow_dispatch
 jobs:
   test:
     runs-on: ububtu-latest
